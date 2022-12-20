@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/form.js"></script>
+    <title>Introducao</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384- ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4ba78ff679.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="CSS/main.css" />
+  </head>
+
+  <body>
+    <header class="container-fluid bg-info">
+      <!-- logo -->
+      <div class="row">
+        <div
+          class="col d-flex justify-content-between justify-content-end align-items-baseline"
+        >
+          <a
+            class="fa-brands fa-facebook text-reset"
+            href="https://www.facebook.com"
+          ></a>
+          <a
+            class="fa-brands fa-twitter text-reset"
+            href="https://www.twitter.com"
+          ></a>
+          <a
+            class="fa-brands fa-instagram text-reset"
+            href="https://www.instagram.com"
+          ></a>
+          <a
+            class="fa-brands fa-linkedin text-reset"
+            href="https://www.linkedin.com"
+          ></a>
+          <div class="col-11 text-right">All rights reserved</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- nav  -->
+    <nav class="navbar py-1 navbar-dark navbar-expand-sm">
+      <div class="container-fluid">
+        <!-- my name -->
+
+        <div class="col">
+          <h1><i class="goo fa-solid fa-image"></i>Questionário Imagens</h1>
+        </div>
+
+        <!-- logo -->
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarLinks"
+        >
+          <span class="navbar-toggler-icon text-primary"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarLinks"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="Introducao.html" class="navbar-brand h1">
+                <button class="other" type="button" style="color: black">
+                  Introdução
+                </button>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="Caracterizacao.html" class="navbar-brand h1">
+                <button class="other" type="button" style="color: black">
+                  Caracterização
+                </button></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="Tarefas.html" class="navbar-brand h1">
+                <button class="other" type="button" style="color: black">
+                  Tarefas
+                </button></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="Avaliacao.html" class="navbar-brand h1">
+                <button class="home bg-info" type="button" style="color: black">
+                  Avaliação
+                </button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- buttons -->
+    </nav>
+    <section id="dados_pessoais" style="margin-left: 5%">
+      <form name="fdpessoais" onsubmit="validateForm3()" action="test.html">
+        <br />
+        <fieldset>
+          <h2>Avaliação Global</h2>
+          <br />
+          <article id="dp1">
+            <h3>
+              1- Para cada par de adjetivos, selecione a opção que melhor
+              descreve a sua experiência de utilização deste site.
+            </h3>
+            <label for="av1">Horrível</label>
+            <input id="av1" type="radio" name="avaliacao" value="1" required />
+
+            <input id="av2" type="radio" name="avaliacao" value="2" />
+
+            <input id="av3" type="radio" name="avaliacao" value="3" />
+
+            <input id="av4" type="radio" name="avaliacao" value="4" />
+            <input id="av5" type="radio" name="avaliacao" value="5" />
+
+            <input id="av6" type="radio" name="avaliacao" value="6" />
+
+            <input id="av7" type="radio" name="avaliacao" value="7" />
+            <label for="name4"> Fantástica </label>
+            <br />
+            <label for="bv1">Aborrecida</label>
+            <input id="bv1" type="radio" name="avaliacao2" value="1" required />
+
+            <input id="bv2" type="radio" name="avaliacao2" value="2" />
+
+            <input id="bv3" type="radio" name="avaliacao2" value="3" />
+
+            <input id="bv4" type="radio" name="avaliacao2" value="4" />
+            <input id="bv5" type="radio" name="avaliacao2" value="5" />
+
+            <input id="bv6" type="radio" name="avaliacao2" value="6" />
+
+            <input id="bv7" type="radio" name="avaliacao2" value="7" />
+            <label for="name4"> Estimulante </label>
+            <br />
+            <label for="cv1">Frustante</label>
+            <input id="cv1" type="radio" name="avaliacao3" value="1" required />
+
+            <input id="cv2" type="radio" name="avaliacao3" value="2" />
+
+            <input id="cv3" type="radio" name="avaliacao3" value="3" />
+
+            <input id="cv4" type="radio" name="avaliacao3" value="4" />
+            <input id="cv5" type="radio" name="avaliacao3" value="5" />
+
+            <input id="cv6" type="radio" name="avaliacao3" value="6" />
+
+            <input id="cv7" type="radio" name="avaliacao3" value="7" />
+            <label for="name4"> Gratificante </label>
+            <br />
+            <label for="dv1">Difícil</label>
+            <input id="dv1" type="radio" name="avaliacao4" value="1" required />
+
+            <input id="dv2" type="radio" name="avaliacao4" value="2" />
+
+            <input id="dv3" type="radio" name="avaliacao4" value="3" />
+
+            <input id="dv4" type="radio" name="avaliacao4" value="4" />
+            <input id="dv5" type="radio" name="avaliacao4" value="5" />
+
+            <input id="dv6" type="radio" name="avaliacao4" value="6" />
+
+            <input id="dv7" type="radio" name="avaliacao4" value="7" />
+            <label for="name4"> Fácil </label>
+            <br />
+          </article>
+
+          <article id="dp2">
+            <h3>
+              2- Classifique o resultado obtido pela pesquisa por Categoria (1
+              significa “Mau” e 5 significa “Excelente”)
+            </h3>
+            <label for="ev1">Mau</label>
+            <input id="ev1" type="radio" name="avaliacao5" value="1" required />
+
+            <input id="ev2" type="radio" name="avaliacao5" value="2" />
+
+            <input id="ev3" type="radio" name="avaliacao5" value="3" />
+
+            <input id="ev4" type="radio" name="avaliacao5" value="4" />
+            <input id="ev5" type="radio" name="avaliacao5" value="5" />
+            <label for="name4"> Excelente </label>
+          </article>
+
+          <article id="fp3" style="vertical-align: middle">
+            <h3>
+              3- Classifique o resultado obtido pela pesquisa por Cor (1
+              significa “Mau” e 5 significa “Excelente”)
+            </h3>
+            <label for="fv1">Mau</label>
+            <input id="fv1" type="radio" name="avaliacao6" value="1" required />
+
+            <input id="fv2" type="radio" name="avaliacao6" value="2" />
+
+            <input id="fv3" type="radio" name="avaliacao6" value="3" />
+
+            <input id="fv4" type="radio" name="avaliacao6" value="4" />
+            <input id="fv5" type="radio" name="avaliacao6" value="5" />
+            <label for="name4"> Excelente </label>
+          </article>
+
+          <article id="dp4">
+            <h3>
+              4- Classifique o resultado obtido pela pesquisa por Imagens
+              Semelhantes (1 significa “Mau” e 5 significa “Excelente”)
+            </h3>
+            <label for="gv1">Mau</label>
+            <input id="gv1" type="radio" name="avaliacao7" value="1" required />
+
+            <input id="gv2" type="radio" name="avaliacao7" value="2" />
+
+            <input id="gv3" type="radio" name="avaliacao7" value="3" />
+
+            <input id="gv4" type="radio" name="avaliacao7" value="4" />
+            <input id="gv5" type="radio" name="avaliacao7" value="5" />
+            <label for="name4"> Excelente </label>
+          </article>
+
+          <article id="dp5">
+            <h3>
+              5- Classifique a utilidade da pesquisa por Imagens Semelhantes (1
+              significa “Pouca” e 5 significa “Muita”)
+            </h3>
+            <label for="hv1">Pouca</label>
+            <input id="hv1" type="radio" name="avaliacao8" value="1" required />
+
+            <input id="hv2" type="radio" name="avaliacao8" value="2" />
+
+            <input id="hv3" type="radio" name="avaliacao8" value="3" />
+
+            <input id="hv4" type="radio" name="avaliacao8" value="4" />
+            <input id="hv5" type="radio" name="avaliacao8" value="5" />
+            <label for="name4"> Muita </label>
+          </article>
+
+          <article id="dp6">
+            <h3>
+              6- Classifique o sistema de navegação do site (1 significa “Mau” e
+              5 significa “Excelente”)?
+            </h3>
+            <label for="iv1">Mau</label>
+            <input id="iv1" type="radio" name="avaliacao9" value="1" required />
+
+            <input id="iv2" type="radio" name="avaliacao9" value="2" />
+
+            <input id="iv3" type="radio" name="avaliacao9" value="3" />
+
+            <input id="iv4" type="radio" name="avaliacao9" value="4" />
+            <input id="iv5" type="radio" name="avaliacao9" value="5" />
+            <label for="name4"> Excelente </label>
+          </article>
+          <article id="dp7">
+            <h3>
+              7- Classifique o o design do site (1 significa “Mau” e 5 significa
+              “Excelente”)
+            </h3>
+            <label for="jv1">Mau</label>
+            <input
+              id="jv1"
+              type="radio"
+              name="avaliacao10"
+              value="1"
+              required
+            />
+
+            <input id="jv2" type="radio" name="avaliacao10" value="2" />
+
+            <input id="jv3" type="radio" name="avaliacao10" value="3" />
+
+            <input id="jv4" type="radio" name="avaliacao10" value="4" />
+            <input id="jv5" type="radio" name="avaliacao10" value="5" />
+            <label for="name4"> Excelente </label>
+          </article>
+          <div id="next" style="margin-top: 3%">
+            <input id="sub" type="submit" name="submit" value="Next" />
+          </div>
+        </fieldset>
+      </form>
+    </section>
+  </body>
+</html>

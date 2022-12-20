@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/form.js"></script>
+    <title>Introducao</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384- ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4ba78ff679.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="CSS/main.css" />
+  </head>
+
+  <body onload="getdataForm()">
+    <header class="container-fluid bg-info">
+      <!-- logo -->
+      <div class="row">
+        <div
+          class="col d-flex justify-content-between justify-content-end align-items-baseline"
+        >
+          <a
+            class="fa-brands fa-facebook text-reset"
+            href="https://www.facebook.com"
+          ></a>
+          <a
+            class="fa-brands fa-twitter text-reset"
+            href="https://www.twitter.com"
+          ></a>
+          <a
+            class="fa-brands fa-instagram text-reset"
+            href="https://www.instagram.com"
+          ></a>
+          <a
+            class="fa-brands fa-linkedin text-reset"
+            href="https://www.linkedin.com"
+          ></a>
+          <div class="col-11 text-right">All rights reserved</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- nav  -->
+    <nav class="navbar py-1 navbar-dark navbar-expand-sm">
+      <div class="container-fluid">
+        <!-- my name -->
+
+        <div class="col">
+          <h1><i class="goo fa-solid fa-image"></i>Questionário Imagens</h1>
+        </div>
+
+        <!-- logo -->
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarLinks"
+        >
+          <span class="navbar-toggler-icon text-primary"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarLinks"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="" class="navbar-brand h1">
+                <button class="home bg-info" type="button" style="color: black">
+                  Introdução
+                </button>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="navbar-brand h1">
+                <button class="other" type="button" style="color: black">
+                  Caracterização
+                </button></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="" class="navbar-brand h1">
+                <button class="other" type="button" style="color: black">
+                  Tarefas
+                </button></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="" class="navbar-brand h1">
+                <button class="other" type="button" style="color: black">
+                  Avaliação
+                </button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <script>
+      function getdataForm() {
+        let todo_index = localStorage.length;
+        let parser = new DOMParser();
+        let xmlDoc;
+        let localStorageRow;
+        let x;
+        for (let i = 1; i <= todo_index; i++) {
+          localStorageRow = localStorage.getItem(localStorage.key(i - 1));
+
+          xmlDoc = parser.parseFromString(localStorageRow, "text/xml");
+
+          x = xmlDoc.getElementsByTagName("q");
+
+          document.write(
+            "<p> Respostas dadas no Questionário: Utilizador " + i + "</p>"
+          );
+          document.write("<p> Idade:" + x[0].childNodes[0].nodeValue + "</p>");
+          document.write("<p> Genero:" + x[1].childNodes[0].nodeValue + "</p>");
+          document.write(
+            "<p> Frquência de Internet:" + x[2].childNodes[0].nodeValue + "</p>"
+          );
+          if (x.length == 6) {
+            document.write(
+              "<p> Web Browsers Favoritos:" +
+                x[3].childNodes[0].nodeValue +
+                ", " +
+                x[4].childNodes[0].nodeValue +
+                "</p>"
+            );
+
+            document.write(
+              "<p> Outros Sites de Pesquisa:" +
+                x[5].childNodes[0].nodeValue +
+                "</p> </br>"
+            );
+          } else if (x.length == 7) {
+            document.write(
+              "<p> Web Browsers Favoritos:" +
+                x[3].childNodes[0].nodeValue +
+                ", " +
+                x[4].childNodes[0].nodeValue +
+                ", " +
+                x[5].childNodes[0].nodeValue +
+                "</p>"
+            );
+
+            document.write(
+              "<p> Outros Sites de Pesquisa:" +
+                x[6].childNodes[0].nodeValue +
+                "</p> </br>"
+            );
+          } else {
+            document.write(
+              "<p> Web Browsers Favoritos:" +
+                x[3].childNodes[0].nodeValue +
+                "</p>"
+            );
+
+            document.write(
+              "<p> Outros Sites de Pesquisa:" +
+                x[4].childNodes[0].nodeValue +
+                "</p> </br>"
+            );
+          }
+        }
+
+        /**
+        document.write(
+          "<p> Respostas dadas no Questionário: Utilizador 1 </p>"
+        );
+        document.write("<p> Test" + localStorageRow + "</p>");
+        document.write("<p> Idade:" + x[0].childNodes[0].nodeValue + "</p>");
+        document.write("<p> Genero:" + x[1].childNodes[0].nodeValue + "</p>");
+        document.write(
+          "<p> Frquência de Internet:" + x[2].childNodes[0].nodeValue + "</p>"
+        );
+        document.write(
+          "<p> Webbrowsers Favoritos:" + x[3].childNodes[0].nodeValue + "</p>"
+        );
+        document.write(
+          "<p> Outros Sites de Pesquisa:" +
+            x[4].childNodes[0].nodeValue +
+            "</p>"
+        );
+        */
+      }
+    </script>
+  </body>
+</html>

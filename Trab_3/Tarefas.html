@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/form.js"></script>
+    <title>Introducao</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384- ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4ba78ff679.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="CSS/main.css" />
+  </head>
+
+  <body>
+    <header class="container-fluid bg-info">
+      <!-- logo -->
+      <div class="row">
+        <div
+          class="col d-flex justify-content-between justify-content-end align-items-baseline"
+        >
+          <a
+            class="fa-brands fa-facebook text-reset"
+            href="https://www.facebook.com"
+          ></a>
+          <a
+            class="fa-brands fa-twitter text-reset"
+            href="https://www.twitter.com"
+          ></a>
+          <a
+            class="fa-brands fa-instagram text-reset"
+            href="https://www.instagram.com"
+          ></a>
+          <a
+            class="fa-brands fa-linkedin text-reset"
+            href="https://www.linkedin.com"
+          ></a>
+          <div class="col-11 text-right">All rights reserved</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- nav  -->
+    <nav class="navbar py-1 navbar-dark navbar-expand-sm">
+      <div class="container-fluid">
+        <!-- my name -->
+
+        <div class="col">
+          <h1><i class="goo fa-solid fa-image"></i>Questionário Imagens</h1>
+        </div>
+
+        <!-- logo -->
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarLinks"
+        >
+          <span class="navbar-toggler-icon text-primary"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarLinks"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="Introducao.html" class="navbar-brand h1">
+                <button class="other" type="button" style="color: black">
+                  Introdução
+                </button>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="Caracterizacao.html" class="navbar-brand h1">
+                <button class="other" type="button" style="color: black">
+                  Caracterização
+                </button></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="Tarefas.html" class="navbar-brand h1">
+                <button class="home bg-info" type="button" style="color: black">
+                  Tarefas
+                </button></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="Avaliacao.html" class="navbar-brand h1">
+                <button class="other" type="button" style="color: black">
+                  Avaliação
+                </button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- buttons -->
+    </nav>
+    <section id="dados_pessoais" style="margin-left: 5%">
+      <form
+        name="fdpessoais"
+        onsubmit="validateForm2()"
+        action="Avaliacao.html"
+      >
+        <br />
+        <h2>Tarefas</h2>
+        <h4>
+          Por favor, realiza as seguintes tarefas e descreva-nos os resultados
+          obtidos
+        </h4>
+        <br />
+        <legend>Tarefa 1- Explorar</legend>
+        <p>
+          <label for="Text1"
+            >Explore o site livremente e indique se encontrou algum erro ou se
+            sentiu alguma dificuldade em perceber a funcionalidade das
+            opções.</label
+          >
+        </p>
+        <textarea id="Text1" name="w3review" rows="2" cols="100"></textarea>
+        <br />
+        <legend>Tarefa 2- Pesquisa Categorias</legend>
+        <p>
+          <label for="Text2"
+            >Escolha a opção de pesquisa por palavra chave, selecione uma
+            categoria à sua escolha e observe os resultados. <br />
+            Que dificuldades encontrou?</label
+          >
+        </p>
+        <textarea id="Text2" name="w3review" rows="2" cols="100"></textarea>
+        <br />
+        <legend>Tarefa 3- Pesquisa Cor</legend>
+        <p>
+          <label for="Text3"
+            >Escolha a opção de pesquisa por cor dominante, selecione uma cor à
+            sua escolha e observe os resultados. <br />Que dificuldades
+            encontrou?</label
+          >
+        </p>
+        <textarea id="Text3" name="w3review" rows="2" cols="100"></textarea>
+        <br />
+        <legend>Tarefa 4- Pesquisa Imagens Semelhantes</legend>
+        <p>
+          <label for="Text4"
+            >Escolha a opção de pesquisa por imagens semelhantes, selecione uma
+            imagem à sua escolha e observe os resultados. <br />Que dificuldades
+            encontrou?
+          </label>
+        </p>
+        <textarea id="Text4" name="w3review" rows="2" cols="100"></textarea>
+        <br />
+
+        <p>
+          <label for="Text5"
+            >Qual o tipo de pesquisa que acha mais adequado?</label
+          >
+        </p>
+        <textarea id="Text5" name="w3review" rows="2" cols="100"></textarea>
+        <br />
+        <br />
+        <div id="next" style="margin-top: 3%">
+          <input id="sub" type="submit" name="submit" value="Next" />
+        </div>
+        <br /><br />
+      </form>
+    </section>
+  </body>
+</html>
